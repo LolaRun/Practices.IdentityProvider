@@ -1,0 +1,3 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" 
+    Service="Practices.IdentityProvider.ContosoSecurityTokenServiceConfiguration" 
+    Factory="Practices.IdentityProvider.ContosoSecurityTokenServiceHostFactory" %>

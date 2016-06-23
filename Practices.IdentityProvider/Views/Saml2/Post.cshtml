@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Post SAML AuthRequest";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <section id="loginForm">
+            <form method="POST" name="hiddenform" action="@ViewBag.IdpUrl">
+                @Html.Hidden("SamlRequest", (string)ViewBag.SamlRequest)
+                @Html.Hidden("RelayState", (string)ViewBag.RelayState)
+                <noscript>
+                    <p>Script is disabled. Click Submit to continue.</p>
+                    <input type="submit" value="Submit" />
+                </noscript>
+            </form>
+        </section>
+        <script language="javascript">window.setTimeout('document.forms[0].submit()', 0);</script>
+    </div>
+</div>
