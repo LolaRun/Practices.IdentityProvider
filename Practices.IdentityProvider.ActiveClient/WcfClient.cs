@@ -6,6 +6,6 @@
     using System.Threading.Tasks;
 
     public class WcfClient {
-
+         
     }
 }
