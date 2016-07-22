@@ -48,6 +48,9 @@
                                         select c.Value).FirstOrDefault();
             outputIdentity.AddClaim(new Claim(ClaimTypes.AuthenticationMethod, authenticationMethod ?? request.AuthenticationType ?? "urn:oasis:names:tc:SAML:1.0:am:password"));
             outputIdentity.AddClaim(new Claim(ClaimTypes.AuthenticationInstant, XmlConvert.ToString(DateTime.Now.ToUniversalTime(), "yyyy-MM-ddTHH:mm:ss.fffZ"), ClaimValueTypes.DateTime));
+
+            outputIdentity.AddClaim(new Claim("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/appcategory", "00008072"));
+
             return outputIdentity;
         }
         

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practices.IdentityProvider", "Practices.IdentityProvider\Practices.IdentityProvider.csproj", "{1F2E69DF-D36C-4F1C-8F22-CFA40BA1BF63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practices.IdentityProvider.ActiveClient", "Practices.IdentityProvider.ActiveClient\Practices.IdentityProvider.ActiveClient.csproj", "{235114D0-B902-49F5-B3C5-B82F5A26D1EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F2E69DF-D36C-4F1C-8F22-CFA40BA1BF63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F2E69DF-D36C-4F1C-8F22-CFA40BA1BF63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F2E69DF-D36C-4F1C-8F22-CFA40BA1BF63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F2E69DF-D36C-4F1C-8F22-CFA40BA1BF63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{235114D0-B902-49F5-B3C5-B82F5A26D1EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{235114D0-B902-49F5-B3C5-B82F5A26D1EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{235114D0-B902-49F5-B3C5-B82F5A26D1EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{235114D0-B902-49F5-B3C5-B82F5A26D1EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

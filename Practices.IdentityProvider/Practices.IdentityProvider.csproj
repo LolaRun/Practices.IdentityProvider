@@ -189,6 +189,7 @@
     <Content Include="Certificates\SAML2.Signing.pfx" />
     <Content Include="Certificates\SAML2.Decryping.cer" />
     <Content Include="Certificates\WSTrust.Signing.pfx" />
+    <Content Include="Certificates\Signing.pfx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
