@@ -55,7 +55,7 @@
             var endpoint = string.Format("{0}://{1}", HttpContext.Current.Request.Url.Scheme, HttpContext.Current.Request.Url.Authority);
             
             var activeEndpoint = new EndpointReference(endpoint + "/SecurityTokenService/Issue.svc");
-            var passiveEndpoint = new EndpointReference(endpoint + "/SecurityTokenService/Issue");
+            var passiveEndpoint = new EndpointReference(endpoint + "/SecurityTokenService/Issue/");
 
             // add the security token service endpoints
             roleDescriptors.SecurityTokenServiceEndpoints.Add(activeEndpoint);

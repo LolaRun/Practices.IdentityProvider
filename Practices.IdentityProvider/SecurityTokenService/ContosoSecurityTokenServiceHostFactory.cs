@@ -44,8 +44,8 @@
             //host.Credentials.ServiceCertificate.Certificate = CertificateUtil.GetCertificate("Certificates\\www.contoso.com.pfx", "pass@word1");
             //host.Credentials.ServiceCertificate.Certificate = CertificateUtil.GetCertificate(ConfigurationManager.AppSettings["WSTrust.SigningCertificatePath"], ConfigurationManager.AppSettings["WSTrust.SigningCertificatePassword"]);
             host.Credentials.ServiceCertificate.Certificate = config.ServiceCertificate;
-            host.AddServiceEndpoint(typeof(IWSTrust13SyncContract),
-                new UserNameWSTrustBinding(SecurityMode.Message), "message/username");
+            //host.AddServiceEndpoint(typeof(IWSTrust13SyncContract),
+            //    new UserNameWSTrustBinding(SecurityMode.Message), "message/username");
 
             host.AddServiceEndpoint(typeof(IWSTrust13SyncContract),
                 new UserNameWSTrustBinding(SecurityMode.TransportWithMessageCredential), "mixed/username");

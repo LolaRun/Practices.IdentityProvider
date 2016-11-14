@@ -12,7 +12,6 @@
     using System.ServiceModel.Security;
     class Program {
         static void Main(string[] args) {
-
             string idpAddress = "https://idp.contoso.com/SecurityTokenService/Issue.svc/mixed/username";
             string fedAddress = "https://sts.contoso.com/adfs/services/trust/13/IssuedTokenMixedSymmetricBasic256";
             string svcAddress = "https://internalcrm.contoso.com";
