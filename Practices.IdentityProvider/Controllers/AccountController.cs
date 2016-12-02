@@ -5,8 +5,8 @@
     using System.Threading.Tasks;
     using System.Web;
     using System.Web.Mvc;
-
-    [Authorize]
+        
+    [AllowAnonymous]
     public class AccountController : Controller {
         public ApplicationSignInManager SignInManager {
             get {
@@ -20,7 +20,7 @@
             }
         }
 
-        [AllowAnonymous]
+        
         public ActionResult Login(string returnUrl) {
             var saml2 = false;
             if (saml2) {
@@ -31,8 +31,7 @@
             }
         }
 
-        [HttpPost]
-        [AllowAnonymous]
+        [HttpPost]        
         public async Task<ActionResult> Login(string userName, string returnUrl) {         
             var result = await SignInManager.PasswordSignInAsync(userName, password: "", isPersistent: false, shouldLockout: false);
             switch (result) {
@@ -47,6 +46,7 @@
             }
         }
 
+        [Authorize]
         public ActionResult LogOff() {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             return RedirectToAction("Index", "Home");
