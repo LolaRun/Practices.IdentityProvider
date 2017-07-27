@@ -10,5 +10,9 @@ namespace Practices.RelyingPart {
         protected void Page_Load(object sender, EventArgs e) {
 
         }
+
+        protected void Unnamed_Click(object sender, EventArgs e) {
+
+        }
     }
 }

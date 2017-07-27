@@ -19,16 +19,20 @@
                 return HttpContext.GetOwinContext().Authentication;
             }
         }
-
         
         public ActionResult Login(string returnUrl) {
             var saml2 = false;
+            var wechat = true;
             if (saml2) {
                 return RedirectToAction("Post", "Saml2", new { ReturnUrl = returnUrl });
-            } else {
-                ViewBag.ReturnUrl = returnUrl;
-                return View();
             }
+            if (wechat) {
+                var host = string.Format("{0}://{1}", HttpContext.Request.Url.Scheme, HttpContext.Request.Url.Authority);
+                returnUrl = host + returnUrl;
+                return RedirectToAction("Post", "WeChat", new { ReturnUrl = returnUrl });
+            }
+            ViewBag.ReturnUrl = returnUrl;
+            return View();
         }
 
         [HttpPost]        
